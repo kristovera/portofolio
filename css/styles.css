@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
@@ -20,7 +20,7 @@ header {
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
@@ -44,17 +44,13 @@ header p {
 
 main {
     padding: 20px;
-    padding-bottom: 80px; 
-}
-
-section {
-    margin: 40px 0;
+    padding-bottom: 80px; /* Extra space for footer */
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 20px;
 }
 
 .about-content {
@@ -64,7 +60,7 @@ section {
 }
 
 .profile-img {
-    border-radius: 100%;
+    border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -89,30 +85,27 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin-bottom: 20px;
+    padding: 20px;
 }
 
 .project-card img {
-    width: 400px;
-    height: 400px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-}
-
-.project-info {
-    padding: 20px;
+    margin-right: 20px;
 }
 
 .project-info h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
 }
 
 .project-info p {
     font-size: 1rem;
-    color: #555;
+    color: #666;
 }
 
 .project-btn {
-    background: linear-gradient(135deg, #1d1c1c, #181818);
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -123,11 +116,13 @@ h2 {
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     outline: none;
+    text-decoration: none;
     display: inline-block;
+    margin-bottom: 10px;
 }
 
 .project-btn:hover {
-    background: linear-gradient(135deg, #0f0f0f, #121212);
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
@@ -142,7 +137,7 @@ h2 {
 .contact-btn {
     display: flex;
     align-items: center;
-    background: #0077b5; /* LinkedIn color */
+    background: #0077b5;
     color: #fff;
     padding: 12px 20px;
     border-radius: 30px;
@@ -153,7 +148,7 @@ h2 {
 }
 
 .contact-btn:hover {
-    background: #005582; /* Darker LinkedIn color */
+    background: #005582;
 }
 
 .contact-btn i {
@@ -168,4 +163,80 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-info h3 {
+        font-size: 1rem;
+    }
+
+    .contact-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
 }
